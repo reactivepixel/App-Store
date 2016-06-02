@@ -3,7 +3,7 @@
 ## Endpoints and response
 ***
 
-##### Get app with Id of 1
+#### Get app with Id of 1
 ```
 http://localhost:3000/api/apps/1
 ```
@@ -19,7 +19,7 @@ http://localhost:3000/api/apps/1
 ```
 ---
 
-##### Get User with Id of 1
+#### Get User with Id of 1
 ```
 http://localhost:3000/api/users/1
 ```
@@ -35,7 +35,7 @@ http://localhost:3000/api/users/1
 ```
 ---
 
-##### Get All Users
+#### Get All Users
 ```
 http://localhost:3000/api/users/
 ```
@@ -64,7 +64,7 @@ http://localhost:3000/api/users/
 ```
 ---
 
-##### Get All Apps
+#### Get All Apps
 ```
 http://localhost:3000/api/apps/
 ```
