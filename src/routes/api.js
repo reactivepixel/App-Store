@@ -87,13 +87,13 @@ module.exports = function(express) {
 // -=-=-=-=- Accept and id for user -=-=-=-=-
 // -=-=-=-=--=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-
   router.get('/users/:id', function (req , res){
-    res.send('user: ' + req.params.id);
+    res.json({"users": [{"id": req.params.id}]});
   })
 
 // -=-=-=-=- Accept and id for Apps -=-=-=-=-
 // -=-=-=-=--=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-
   router.get('/apps/:id', function (req , res){
-    res.send('app: ' + req.params.id);
+    res.json({"apps": [{"id": req.params.id}]});
   })
 
   return router
