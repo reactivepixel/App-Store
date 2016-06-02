@@ -84,14 +84,16 @@ module.exports = function(express) {
   })
 
 
-// -=-=-=-=- Accept and id for user -=-=-=-=-
+// -=-=-=-=- Accept an id for User -=-=-=-=-
 // -=-=-=-=--=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-
+// Will use this for querying the database for that users Id
   router.get('/users/:id', function (req , res){
     res.json({"users": [{"id": req.params.id}]});
   })
 
-// -=-=-=-=- Accept and id for Apps -=-=-=-=-
+// -=-=-=-=- Accept an id for Apps -=-=-=-=-
 // -=-=-=-=--=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-
+// Will use this for querying the database for that apps Id
   router.get('/apps/:id', function (req , res){
     res.json({"apps": [{"id": req.params.id}]});
   })
