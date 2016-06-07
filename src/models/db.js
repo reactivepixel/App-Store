@@ -17,9 +17,6 @@ const user = sequelize.define('user', {
     name: {
         type: Sequelize.STRING,
     },
-    appId: {
-        type: Sequelize.INTEGER,
-    },
 });
 
 // artAssets table model
@@ -29,9 +26,6 @@ const artAssets = sequelize.define('artAssets', {
     },
     srcLink: {
         type: Sequelize.STRING,
-    },
-    appId: {
-        type: Sequelize.INTEGER,
     },
 });
 
@@ -48,16 +42,15 @@ const app = sequelize.define('app', {
     },
 });
 
-// foreign key for artAssets
+// foreign key for artAssets. app has many artAssets
 app.hasMany(artAssets, {
-    as: 'appId',
+    as: 'artAssets',
 });
 
-// foreign key for users
-app.hasMany(user, {
-    as: 'appId',
-});
-
+// foreign key for users. A app only has one user
+app.hasOne(user, {
+    as: 'user'
+})
 // This will link to the database so that you can use CRUD.
 sequelize.sync();
 

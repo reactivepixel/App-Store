@@ -8,6 +8,19 @@ exports.findAll = (err, success) => {
     db.app.findAll().then(success).catch(err);
 }
 
+// find all apps with a user id
+// returning emply because of it not existing. cannot figure out
+// how to grab the app with id.
+exports.findAllUserApps = (payload, err, success) => {
+    db.app.findAll({
+        where: {
+            user: {
+                id: payload.userId,
+            },
+        },
+    }).then(success).catch(err);
+}
+
 exports.find = (payload, err, success) => {
     db.app.find({
         where: {

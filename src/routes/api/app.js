@@ -25,6 +25,22 @@ module.exports = (express) => {
         })
     });
 
+
+    // Read All
+    // does not work. ran out of time. returns empty
+    router.get('/apps/users/:userId', (req, res) => {
+        // grab value passed in though url.
+        req.body.userId = parseInt(req.params.userId)
+
+        // call the findAll method
+        app.findAllUserApps(req.body, (err) => {
+            res.status(500).json(err);
+        },(data) => {
+            res.status(200).json(data);
+        })
+    });
+
+
     // Read One
     router.get('/apps/:id', (req, res) => {
         // grab value passed in though url.
