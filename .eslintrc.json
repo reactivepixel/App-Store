@@ -1,0 +1,19 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "new-cap": 0,
+        "prefer-template": 0,
+        "global-require": 0,
+        "no-console": ["error", { "allow": ["log", "error"] }]
+    },
+    "globals": {
+        "describe": true,
+        "it": true
+    }
+}
