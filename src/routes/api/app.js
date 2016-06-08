@@ -1,5 +1,6 @@
 const app = require('../../models/app');
 
+
 module.exports = (express) => {
   const router = express.Router();
 
@@ -25,7 +26,6 @@ module.exports = (express) => {
 
 
   // Read All apps with user Id
-  // does not work. ran out of time. returns empty
   router.get('/users/:userId/apps', (req, res) => {
     // grab value passed in though url.
     const reqBody = {
@@ -74,6 +74,10 @@ module.exports = (express) => {
   router.post('/apps/:id', (req, res) => {
     const reqBody = {
       id: req.params.id,
+      title: req.body.title,
+      description: req.body.description,
+      releaseDate: req.body.releaseDate,
+      userId: req.body.userId,
     };
     app.update(reqBody, (err) => {
       res.status(500).json(err);

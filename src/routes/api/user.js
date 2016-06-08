@@ -58,6 +58,7 @@ module.exports = (express) => {
     // grab value passed in though url.
     const reqBody = {
       id: req.params.id,
+      name: req.body.name,
     };
 
       // call the update method

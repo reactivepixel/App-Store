@@ -72,6 +72,8 @@ module.exports = (express) => {
     // grab value passed in though url.
     const reqBody = {
       id: req.params.id,
+      title: req.body.title,
+      srcLink: req.body.srcLink,
       appId: req.params.appId,
     };
 
