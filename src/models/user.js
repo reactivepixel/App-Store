@@ -16,10 +16,6 @@ exports.find = (payload, err, success) => {
     where: {
       id: payload.id,
     },
-    // include: ({
-    //   all: true,
-    //   nested: true,
-    // }),
   }).then(success).catch(err);
 };
 
