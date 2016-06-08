@@ -266,7 +266,7 @@
 
 #### POST -==- Create artassets
 ```
-/api/apps/1/artAssets/
+/api/apps/1/artassets/
 ```
 ##### Sample
 ```
@@ -280,7 +280,7 @@
 
 #### GET -==- All artassets upon app id
 ```
-/api/apps/1/artAssets/
+/api/apps/1/artassets/
 ```
 ##### Sample
 ```
@@ -307,7 +307,7 @@
 
 #### GET -==- Display one artassets from specific app id and artassetid
 ```
-/api/apps/1/artAssets/2
+/api/apps/1/artassets/2
 ```
 ##### Sample Response
 ```
@@ -324,7 +324,7 @@
 
 #### POST -==- Update artassets based upon id
 ```
-/api/apps/1/artAssets/2
+/api/apps/1/artassets/2
 ```
 ##### Sample
 ```
