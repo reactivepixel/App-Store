@@ -34,24 +34,24 @@ DEBUG=true nodemon src/server.js
 
 ## CRUD for Users
 * [Create a User](#post-create-user)
-* Display User based upon id
-* Display all Users
-* Update User based upon id
-* Delete User based upon id
+* [Display User based upon id](#user-with-id-of-1)
+* [Display all Users](#get-all-users)
+* [Update User based upon id](#update-user)
+* [Delete User based upon id](#delete-user)
 
 ## CRUD for Apps
-* Create an App
-* Display App based upon id
-* Display all App from specific userId
-* Display all Apps
-* Update User based upon id
-* Update App UserId
+* [Create an App](#post-create-app)
+* [Display App based upon id](#get-app-with-id-of-1)
+* [Display all App from specific userId](#get-app-by-user-id)
+* [Display all Apps](#get-all-apps)
+* [Update User based upon id](#post-update-app)
+* [Update App UserId](#post-update-app-userid)
 
 ## ArtAssets to Apps
-* Create artassets
-* Display all artassets upon app id
-* Display one artassets from specific app id and artassetid
-* Update artassets based upon id
+* [Create artassets](#post-create-artassets)
+* [Display all artassets upon app id](#get-all-artassets-upon-app-id)
+* [Display one artassets from specific app id and artassetid](#get-display-one-artassets-from-specific-app-id-and-artassetid)
+* [Update artassets based upon id](#post-update-artassets-based-upon-id)
 
 
 
