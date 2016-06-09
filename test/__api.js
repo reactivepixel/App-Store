@@ -1,22 +1,23 @@
-var request = require("supertest");
+let request = require('supertest');
 
-describe('API', function() {
-    var server;
+describe('API', () => {
+	let server;
 
-    beforeEach(function(){
-        server = require("../src/server.js");
-    });
+	beforeEach(function() {
+    server = require('../src/server.js');
+	});
 
-    afterEach(function() {
-        server.close;
-    });
+	afterEach(function() {
+		server.close;
+	});
 
-    it("/ should return hello: 'world'", function test(done) {
-        request(server)
-        .get('/')
-        .set('Accept', 'application/json')
-        .expect('Content-Type', /json/)
-        .expect(200, {"hello": "World"}, done);
-    });
-})
-
+	it("/ should return hello: 'world'", function test(done) {
+	   request(server)
+			.get('/')
+			.set('Accept', 'application/json')
+			.expect('Content-Type', /json/)
+			.expect(200, {
+				hello: 'World'
+			}, done);
+	});
+});
