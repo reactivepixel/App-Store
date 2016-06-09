@@ -14,6 +14,19 @@
 npm install
 ```
 
+##### Sample `.env` file
+
+```
+DB_NAME=apiCRUD
+DB_USER=
+DB_PASS=
+DB_HOST=localhost
+DB_SCHEMA=mysql
+DB_PORT=3306
+PORT = 3000
+NODE_DEBUG=DEV
+```
+
 ##### Start Server Without Debug
 ```
 gulp startup
