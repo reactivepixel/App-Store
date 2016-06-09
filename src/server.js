@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const util = require('../lib/util');
+require('dotenv').config();
 
 const port = process.env.PORT || 3000;
 
@@ -16,7 +17,7 @@ app.use('/', require('./routes')(express));
 
 // Tell the app which port to listen too.
 const server = app.listen(port, () => {
-  util.debug('app is running on port:', port);
+  util.debug('App server is running on port: ' + port);
 });
 
 // This will allow the test to require the server
