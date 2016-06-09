@@ -28,8 +28,7 @@ DEBUG=true nodemon src/server.js
 ```
 
 
-## To Debug
-Use the
+## Debug Usage
 ``
 const util = require('path/to/lib/util');
 
