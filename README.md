@@ -14,15 +14,20 @@
 npm install
 ```
 
-##### Start Server
+##### Start Server Without Debug
 ```
 gulp startup
+```
+or
+```
+nodemon src/server.js
 ```
 
 ##### Start Server Dev Debug
 ```
 DEBUG=true gulp startup
 ```
+or
 ```
 DEBUG=true nodemon src/server.js
 ```
