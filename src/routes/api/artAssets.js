@@ -1,5 +1,5 @@
 const artAssets = require('../../models/artassets');
-// const app = require('../../models/app');
+const util = require('../../../lib/util');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -15,9 +15,11 @@ module.exports = (express) => {
       // call the create method
     artAssets.create(reqBody, (err) => {
       res.status(500).json(err);
-    }, (data => {
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
+    }, (data) => {
       res.status(200).json(data);
-    }));
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
+    });
   });
 
   // Read All
@@ -30,8 +32,10 @@ module.exports = (express) => {
     // call the findAll method
     artAssets.findAll(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 
@@ -46,8 +50,10 @@ module.exports = (express) => {
     // call the find method
     artAssets.find(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 
@@ -62,8 +68,10 @@ module.exports = (express) => {
     // call the destroy method
     artAssets.destroy(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 
@@ -80,8 +88,10 @@ module.exports = (express) => {
     // call the update method
     artAssets.update(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 

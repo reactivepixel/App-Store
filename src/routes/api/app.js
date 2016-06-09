@@ -1,5 +1,5 @@
 const app = require('../../models/app');
-
+const util = require('../../../lib/util');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -9,9 +9,11 @@ module.exports = (express) => {
     // call the create method
     app.create(req.body, (err) => {
       res.status(500).json(err);
-    }, (data => {
+      util.debug(req.method + ' ' + req.path, req.body, res.statusCode);
+    }, (data) => {
       res.status(200).json(data);
-    }));
+      util.debug(req.method + ' ' + req.path, req.body, res.statusCode);
+    });
   });
 
   // Read All
@@ -19,8 +21,10 @@ module.exports = (express) => {
     // call the findAll method
     app.findAll((err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, req.body, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, req.body, res.statusCode);
     });
   });
 
@@ -35,8 +39,10 @@ module.exports = (express) => {
     // call the findAll method
     app.findAllUserApps(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 
@@ -51,8 +57,10 @@ module.exports = (express) => {
     // call the find method
     app.find(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, res, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, res, res.statusCode);
     });
   });
 
@@ -65,8 +73,10 @@ module.exports = (express) => {
     // call the destroy method
     app.destroy(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 
@@ -81,8 +91,10 @@ module.exports = (express) => {
     };
     app.update(reqBody, (err) => {
       res.status(500).json(err);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     }, (data) => {
       res.status(200).json(data);
+      util.debug(req.method + ' ' + req.path, reqBody, res.statusCode);
     });
   });
 
