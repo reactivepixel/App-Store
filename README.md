@@ -3,9 +3,9 @@
 ##### Requirements
 * NodeJS /w npm
 * MySQL
-* Gulp globally
-* nodemon globally
-
+* Gulp - (globally)
+* nodemon - (globally)
+* mocha - (globally)
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ or
 ```
 DEBUG=true nodemon src/server.js
 ```
-
+***
 
 ## Debug Usage
 ``
@@ -40,18 +40,29 @@ const util = require('path/to/lib/util');
 // How to use util
 util.debug(title, obj, status);
 ``
-
-## Endpoints and response
+## Test Usage
+If you don't already install mocha globally.
+* This will give you command line access to mocha.
+```
+npm install -g mocha
+```
+Then from project root run:
+```
+mocha
+```
 ***
 
-## CRUD for Users
+
+## Endpoints and response
+
+### CRUD for Users
 * [Create a User](#post-create-user)
 * [Display User based upon id](#user-with-id-of-1)
 * [Display all Users](#get-all-users)
 * [Update User based upon id](#update-user)
 * [Delete User based upon id](#delete-user)
 
-## CRUD for Apps
+### CRUD for Apps
 * [Create an App](#post-create-app)
 * [Display App based upon id](#get-app-with-id-of-1)
 * [Display all App from specific userId](#get-app-by-user-id)
@@ -59,7 +70,7 @@ util.debug(title, obj, status);
 * [Update User based upon id](#post-update-app)
 * [Update App UserId](#post-update-app-userid)
 
-## ArtAssets to Apps
+### ArtAssets to Apps
 * [Create artassets](#post-create-artassets)
 * [Display all artassets upon app id](#get-all-artassets-upon-app-id)
 * [Display one artassets from specific app id and artassetid](#get-display-one-artassets-from-specific-app-id-and-artassetid)
@@ -68,25 +79,25 @@ util.debug(title, obj, status);
 
 
 
-### CRUD for Users
+#### CRUD for Users
 --=-=-=-=-=-=-=-=-
 
-#### POST Create User
+##### POST Create User
 ```
 /api/users/
 ```
-##### Sample
+###### Sample
 ```
 {
   "name": "Kevin",
 }
 ```
 
-#### GET User with Id of 1
+##### GET User with Id of 1
 ```
 /api/users/1
 ```
-##### Sample Response
+###### Sample Response
 ```
 {
  "id": 1,
@@ -97,11 +108,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### GET All Users
+##### GET All Users
 ```
 /api/users/
 ```
-##### Sample Response
+###### Sample Response
 ```
 [
  {
@@ -126,11 +137,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### POST Update User
+##### POST Update User
 ```
 /api/users/1
 ```
-##### Sample
+###### Sample
 ```
 {
  "name": "Kevin T"
@@ -138,11 +149,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### DELETE User
+##### DELETE User
 ```
 /api/users/1
 ```
-##### Response
+###### Response
 ```
 1
 ```
@@ -150,14 +161,14 @@ util.debug(title, obj, status);
 
 
 
-### CRUD for Apps
+#### CRUD for Apps
 -=-=-=-=-=-=-=-=-
 
-#### POST Create App
+##### POST Create App
 ```
 /api/apps
 ```
-##### Sample
+###### Sample
 ```
 {
   "title": "Best routes Ever",
@@ -167,11 +178,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### GET App with Id of 1
+##### GET App with Id of 1
 ```
 /api/apps/1
 ```
-##### Sample Response
+###### Sample Response
 ```
 {
  "id": 1,
@@ -195,11 +206,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### Get App by user id
+##### Get App by user id
 ```
 /api/users/1/apps
 ```
-##### Sample Response
+###### Sample Response
 ```
 [
  {
@@ -242,11 +253,11 @@ util.debug(title, obj, status);
 
 
 
-#### GET All Apps
+##### GET All Apps
 ```
 /api/apps/
 ```
-##### Sample Response
+###### Sample Response
 ```
 [
  {
@@ -271,11 +282,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### POST Update App
+##### POST Update App
 ```
 /api/apps/1
 ```
-##### Sample
+###### Sample
 ```
 {
   "title": "Best routes Ever Ever",
@@ -286,11 +297,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### POST Update App UserId
+##### POST Update App UserId
 ```
 /api/apps/1
 ```
-##### Sample
+###### Sample
 ```
 {
   "title": "Best routes Ever Ever",
@@ -302,13 +313,13 @@ util.debug(title, obj, status);
 
 
 
-## ArtAssets to Apps
+### ArtAssets to Apps
 
-#### POST Create artassets
+##### POST Create artassets
 ```
 /api/apps/1/artassets/
 ```
-##### Sample
+###### Sample
 ```
 {
   "title": "Best router Ever",
@@ -318,11 +329,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### GET All artassets upon app id
+##### GET All artassets upon app id
 ```
 /api/apps/1/artassets/
 ```
-##### Sample
+###### Sample
 ```
 [
  {
@@ -345,11 +356,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### GET Display one artassets from specific app id and artassetid
+##### GET Display one artassets from specific app id and artassetid
 ```
 /api/apps/1/artassets/2
 ```
-##### Sample Response
+###### Sample Response
 ```
 {
  "id": 2,
@@ -362,11 +373,11 @@ util.debug(title, obj, status);
 ```
 
 
-#### POST Update artassets based upon id
+##### POST Update artassets based upon id
 ```
 /api/apps/1/artassets/2
 ```
-##### Sample
+###### Sample
 ```
 {
  "id": 2,
