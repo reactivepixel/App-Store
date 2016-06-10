@@ -47,21 +47,11 @@ DEBUG=true nodemon src/server.js
 ***
 
 ## Debug Usage
-``
+```
 const util = require('path/to/lib/util');
 
 // How to use util
 util.debug(title, obj, status);
-``
-## Test Usage
-If you don't already install mocha globally.
-* This will give you command line access to mocha.
-```
-npm install -g mocha
-```
-Then from project root run:
-```
-mocha
 ```
 ***
 
