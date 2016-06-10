@@ -1,5 +1,5 @@
 const db = require('./db');
-
+const util = require('../../lib/util');
 // create user
 exports.create = (payload, err, success) => {
   db.user.create(payload).then(success).catch(err);
