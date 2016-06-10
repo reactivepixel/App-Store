@@ -1,5 +1,5 @@
 const request = require('supertest');
-// const expect = require('chai').expect;
+const expect = require('chai').expect;
 // const tools = require('../lib/tools');
 const rewire = require('rewire');
 
@@ -7,14 +7,14 @@ const rewire = require('rewire');
 // into the title API.
 describe('API', () => {
   let server;
-  let testdata;
+  // let testdata;
 
   // Grab the server for each test.
   beforeEach(() => {
-    server = rewire('../src/server.js');
-    testdata = require('../lib/testdata.js');
-    this.defs = testdata;
-    server.__set__(testdata, this.defs);
+    server = require('../src/server.js');
+    // testdata = require('../lib/testdata.js');
+    // this.defs = testdata;
+    // server.__set__(testdata, this.defs);
   });
 
   // Close the connection after test.
